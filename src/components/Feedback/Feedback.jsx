@@ -20,31 +20,37 @@ class Feedback extends React.Component {
       };
     });
   };
-  // countPositiveFeedbackPercentage = () => {
-  //   return Math.round((this.state.good * 100) / 100);
-  // };
+  countTotalFeedback = () => {
+    return this.state.good + this.state.neutral + this.state.bad;
+  };
+  countPositiveFeedbackPercentage = () => {
+    return this.countTotalFeedback()
+      ? Math.round((this.state.good / this.countTotalFeedback()) * 100)
+      : 0;
+  };
 
   render() {
     return (
       <div>
-        <h2>Please leave feedback</h2>
-        <FeedbackOptions handleClick={this.handleClick} />
-        <h3>Statics</h3>
-        <Notification message="There is no feedback" />
-        <Statistics
-          good={this.state.good}
-          neutral={this.state.neutral}
-          bad={this.state.bad}
-          total={this.state.good + this.state.neutral + this.state.bad}
-          positivePercentage={this.state.good}
-        />
-
-        <Section title="" />
+        <Section title="Please leave feedback">
+          <FeedbackOptions onLeaveFeedback={this.handleClick} />
+        </Section>
+        <Section title="Statistics">
+          {this.countTotalFeedback() ? (
+            <Statistics
+              good={this.state.good}
+              neutral={this.state.neutral}
+              bad={this.state.bad}
+              total={this.countTotalFeedback()}
+              positivePercentage={this.countPositiveFeedbackPercentage()}
+            />
+          ) : (
+            <Notification message="There is no feedback" />
+          )}
+        </Section>
       </div>
     );
   }
 }
-
-Feedback.propTypes = {};
 
 export default Feedback;
