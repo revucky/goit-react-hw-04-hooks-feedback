@@ -12,12 +12,15 @@
   align-items: center;
   letter-spacing: -0.015em;
   background-color: transparent;
+  transition: all 0.5s ease-in-out;
+  transform: translate(0, 30%);
 }
 .Button:hover {
   color: salmon;
   text-transform: uppercase;
   background-color: rgb(13, 255, 33);
   border: none;
+  transform: scaleY(1.2);
 }
 .btn {
   margin-right: 33px;
