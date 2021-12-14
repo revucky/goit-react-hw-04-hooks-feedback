@@ -1,0 +1,10 @@
+.Title {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+  margin-bottom: 60px;
+}

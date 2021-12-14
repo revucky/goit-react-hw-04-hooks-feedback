@@ -1,0 +1,28 @@
+.Button {
+  border: 2px solid salmon;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 140px;
+  height: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  letter-spacing: -0.015em;
+  background-color: transparent;
+}
+.Button:hover {
+  color: salmon;
+  text-transform: uppercase;
+  background-color: rgb(13, 255, 33);
+  border: none;
+}
+.btn {
+  margin-right: 33px;
+  margin-left: 36px;
+}
+.Green {
+  background-color: rgb(13, 255, 33);
+}

@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
+import "../styles/Notificate.css";
+import "../styles/Notificate.css";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Notification = ({ message }) => {
   return (
-    <div>
+    <div className="subtitle">
       <p>{message}</p>
     </div>
   );

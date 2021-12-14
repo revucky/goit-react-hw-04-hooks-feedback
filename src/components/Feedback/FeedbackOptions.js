@@ -1,16 +1,32 @@
 import React from "react";
+import "./Buttons.css";
 
 const FeedbackOptions = ({ onLeaveFeedback }) => {
   return (
     <div>
-      <button id="good" type="button" onClick={onLeaveFeedback}>
-        Good
+      <button
+        className="Button "
+        id="good"
+        type="button"
+        onClick={onLeaveFeedback}
+      >
+        good
       </button>
-      <button id="neutral" type="button" onClick={onLeaveFeedback}>
-        Neutral
+      <button
+        className="Button btn"
+        id="neutral"
+        type="button"
+        onClick={onLeaveFeedback}
+      >
+        neutral
       </button>
-      <button id="bad" type="button" onClick={onLeaveFeedback}>
-        Bad
+      <button
+        className="Button"
+        id="bad"
+        type="button"
+        onClick={onLeaveFeedback}
+      >
+        bad
       </button>
     </div>
   );
